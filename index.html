@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-classic">
+
+    <!-- Screen 1: Welcome/Start Button -->
+    <div id="start-screen" class="menu-container">
+        <h1>Tic-Tac-Toe</h1>
+        <button id="init-btn" class="main-btn">Start Game</button>
+    </div>
+
+    <!-- Screen 2: Setup Menu -->
+    <div id="setup-screen" class="menu-container hidden">
+        <h2>Game Settings</h2>
+        
+        <!-- Opponent Selection -->
+        <div class="setting-section">
+            <p>Select Mode:</p>
+            <button id="mode-comp" class="mode-btn active">🤖 Vs Computer</button>
+            <button id="mode-p2" class="mode-btn">👥 2 Player</button>
+        </div>
+
+        <!-- Custom Tokens/Signs -->
+        <div class="setting-section">
+            <p>Select Player 1 Token:</p>
+            <select id="p1-token">
+                <option value="🔴">🔴 Red Token</option>
+                <option value="❌">❌ Classic</option>
+                <option value="👑">👑 Crown</option>
+                <option value="🔥">🔥 Fire</option>
+            </select>
+            
+            <p>Select Player 2 / Computer Token:</p>
+            <select id="p2-token">
+                <option value="🔵">🔵 Blue Token</option>
+                <option value="⭕">⭕ Classic</option>
+                <option value="⭐">⭐ Star</option>
+                <option value="❄️">❄️ Ice</option>
+            </select>
+        </div>
+
+        <!-- Theme Selection -->
+        <div class="setting-section">
+            <p>Choose Theme:</p>
+            <select id="theme-select">
+                <option value="theme-classic">🎨 Classic Theme (Yellow/Green)</option>
+                <option value="theme-neon">✨ Neon Theme</option>
+                <option value="theme-dark">🌙 Dark Premium Theme</option>
+            </select>
+        </div>
+
+        <button id="play-btn" class="main-btn">Play Now 🚀</button>
+    </div>
+
+    <!-- Screen 3: Actual Game Board -->
+    <div id="game-screen" class="game-container hidden">
+        <h2 id="status" class="status">Player 1's turn</h2>
+        
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="control-btns">
+            <button id="reset-btn">Restart Round</button>
+            <button id="back-btn">Main Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

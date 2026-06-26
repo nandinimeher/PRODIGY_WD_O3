@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.5s ease;
+}
+
+/* --- THEMES (Ludo Inspired) --- */
+.theme-classic {
+    background: linear-gradient(135deg, #ffc107 50%, #4caf50 50%); /* Yellow & Green Ludo Vibe */
+}
+.theme-classic .board { background-color: #f44336; padding: 8px; } /* Red border */
+.theme-classic .cell { background-color: #fff; color: #333; }
+.theme-classic .main-btn, .theme-classic #reset-btn { background-color: #e91e63; }
+
+.theme-neon {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+.theme-neon .board { background-color: #111; gap: 8px; }
+.theme-neon .cell { background-color: #222; color: #fff; text-shadow: 0 0 10px #00f2fe; }
+.theme-neon .main-btn, .theme-neon #reset-btn { background-color: #00f2fe; color: #000; }
+
+.theme-dark {
+    background: #1e1e24;
+}
+.theme-dark .board { background-color: #2a2a35; }
+.theme-dark .cell { background-color: #333344; color: #fff; }
+.theme-dark .main-btn, .theme-dark #reset-btn { background-color: #6c5ce7; }
+.theme-dark h1, .theme-dark h2, .theme-dark p { color: #fff; }
+
+/* UI Layouts */
+.menu-container, .game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 90%;
+}
+.theme-dark .menu-container, .theme-dark .game-container {
+    background: rgba(40, 40, 55, 0.95);
+}
+
+.hidden { display: none !important; }
+
+h1 { font-size: 2rem; margin-bottom: 20px; }
+.status { font-size: 1.4rem; margin-bottom: 20px; font-weight: bold; }
+
+/* Settings Form */
+.setting-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+.setting-section p { font-weight: bold; margin-bottom: 8px; }
+select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+/* Mode Buttons */
+.mode-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+.mode-btn.active {
+    border-color: #2ecc71;
+    background-color: #d4edda;
+    font-weight: bold;
+}
+
+/* 3x3 Grid Matrix */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    width: 310px;
+}
+
+.cell {
+    font-size: 2.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, transform 0.1s;
+    border-radius: 5px;
+}
+.cell:active { transform: scale(0.95); }
+
+/* Control Buttons */
+.main-btn, #reset-btn, #back-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+#back-btn { background-color: #7f8c8d; }
+.main-btn:hover, #reset-btn:hover, #back-btn:hover { transform: translateY(-2px); }
